@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "25488214859",
+    "project_id": "accountauthsystem",
+    "storage_bucket": "accountauthsystem.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25488214859:android:348032f70d5f525d8a36ce",
+        "android_client_info": {
+          "package_name": "com.example.accountauthsystem"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaHH8zAzILav15SC5Mx9O1aia3vkjTocM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
