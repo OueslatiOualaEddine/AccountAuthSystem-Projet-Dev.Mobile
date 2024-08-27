@@ -1,10 +1,11 @@
-import 'package:accountauthsystem/screens/forget_passsword_screen.dart';
-import 'package:accountauthsystem/screens/homescreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
-import 'package:accountauthsystem/screens/signup_screen.dart';
 import 'package:accountauthsystem/widgets/custom_scaffold.dart';
+import 'package:accountauthsystem/screens/signup_screen.dart';
+import 'package:accountauthsystem/screens/forget_passsword_screen.dart';
+import 'package:accountauthsystem/screens/homescreen.dart';
+import 'package:accountauthsystem/services/advanced_auth.dart';
 
 import '../theme/theme.dart';
 
@@ -31,7 +32,6 @@ class _SignInScreenState extends State<SignInScreen> {
       Navigator.push(context, MaterialPageRoute(
           builder: (context) => Home(
           email: email,
-          password: password,
           isSignUp: false,
         ),
       ));
@@ -99,11 +99,6 @@ class _SignInScreenState extends State<SignInScreen> {
                           color: lightColorScheme.primary,
                         ),
                       ),
-                      Text(
-                          '\nEnter your credentials to log \n into your account',
-                          style: TextStyle(fontSize: 20),
-                          textAlign: TextAlign.center,
-                      ),
                       const SizedBox(
                         height: 40.0,
                       ),
@@ -169,7 +164,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         ),
                       ),
                       const SizedBox(
-                        height: 25.0,
+                        height: 10.0,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -207,7 +202,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         ],
                       ),
                       const SizedBox(
-                        height: 25.0,
+                        height: 15.0,
                       ),
                       SizedBox(
                         width: double.infinity,
@@ -269,26 +264,27 @@ class _SignInScreenState extends State<SignInScreen> {
                         ],
                       ),
                       const SizedBox(
-                        height: 25.0,
+                        height: 20.0,
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Logo(Logos.facebook_f),
-                          Logo(Logos.twitter),
-                          Logo(Logos.google),
-                          Logo(Logos.apple),
-                        ],
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.red,
+                        ),
+                        onPressed: () {
+                          // Your Google Sign-In logic here
+                          AuthMethods().signInWithGoogle(context);
+                        },
+                        child: Text("Login with Google"),
                       ),
                       const SizedBox(
-                        height: 25.0,
+                        height: 20.0,
                       ),
                       // don't have an account
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Text(
-                            'Don\'t have an account? ',
+                            'Don\'t have an account ? ',
                             style: TextStyle(
                               color: Colors.black45,
                             ),

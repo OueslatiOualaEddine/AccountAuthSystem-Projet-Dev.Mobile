@@ -3,13 +3,11 @@ import 'package:accountauthsystem/widgets/custom_scaffold.dart';
 
 class Home extends StatefulWidget {
   final String email;
-  final String password;
   final bool isSignUp; // true if the user just signed up, false if logged in
 
   const Home({
     Key? key,
     required this.email,
-    required this.password,
     required this.isSignUp,
   }) : super(key: key);
 
@@ -61,13 +59,6 @@ class _HomeState extends State<Home> {
                         ),
                         TextSpan(
                           text: "Email: ${widget.email}\n",
-                          style: TextStyle(
-                            fontSize: 30.0,
-                            color: Colors.white,
-                          ),
-                        ),
-                        TextSpan(
-                          text: "Password: ${widget.password}\n\n\n\n\n\n",
                           style: TextStyle(
                             fontSize: 30.0,
                             color: Colors.white,

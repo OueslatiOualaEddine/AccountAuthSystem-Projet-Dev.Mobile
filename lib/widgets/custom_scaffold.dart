@@ -9,6 +9,7 @@ class CustomScaffold extends StatelessWidget {
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Colors.white),
         backgroundColor: Colors.transparent,
+        automaticallyImplyLeading: false,
         elevation: 0,
       ),
       extendBodyBehindAppBar: true,

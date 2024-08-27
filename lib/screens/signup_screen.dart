@@ -38,7 +38,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
             context, MaterialPageRoute(
           builder: (context) => Home(
           email: email,
-          password: password,
           isSignUp: true,
         ), ));
       } on FirebaseAuthException catch (e) {
@@ -98,11 +97,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           fontWeight: FontWeight.w900,
                           color: lightColorScheme.primary,
                         ),
-                      ),
-                      Text(
-                        '\nEnter your personal details to \n create your account',
-                        style: TextStyle(fontSize: 20),
-                        textAlign: TextAlign.center,
                       ),
                       const SizedBox(
                         height: 40.0,
@@ -203,7 +197,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         ),
                       ),
                       const SizedBox(
-                        height: 25.0,
+                        height: 15.0,
                       ),
                       // i agree to the processing
                       Row(
@@ -233,7 +227,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         ],
                       ),
                       const SizedBox(
-                        height: 25.0,
+                        height: 20.0,
                       ),
                       // signup button
                       SizedBox(
@@ -266,52 +260,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                       const SizedBox(
                         height: 30.0,
-                      ),
-                      // sign up divider
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Expanded(
-                            child: Divider(
-                              thickness: 0.7,
-                              color: Colors.grey.withOpacity(0.5),
-                            ),
-                          ),
-                          const Padding(
-                            padding: EdgeInsets.symmetric(
-                              vertical: 0,
-                              horizontal: 10,
-                            ),
-                            child: Text(
-                              'Sign up with',
-                              style: TextStyle(
-                                color: Colors.black45,
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: Divider(
-                              thickness: 0.7,
-                              color: Colors.grey.withOpacity(0.5),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 30.0,
-                      ),
-                      // sign up social media logo
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Logo(Logos.facebook_f),
-                          Logo(Logos.twitter),
-                          Logo(Logos.google),
-                          Logo(Logos.apple),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 25.0,
                       ),
                       // already have an account
                       Row(
