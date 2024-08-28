@@ -52,7 +52,7 @@ This project is a Flutter-based authentication system utilizing Firebase for use
 
 ## Live Demo
 
-Check out the live demo of the app in action: <img src="Screenshots/FlutterAppDemo.mp4" alt="Flutter App Demo" width="250"/>
+Check out the live demo of the app in action: <a href="Screenshots/FlutterAppDemo.mp4" target="_blank">Flutter App Demo</a>
 
 
 ## Screenshots
